@@ -8,7 +8,7 @@ const   int   distanceAlarm   = 13;
 int   duration, distance;
 
 // Verify Switches
-bool  ThereIsASwitchOn    =   false;
+bool      ThereIsASwitchOn              =   false;
 
 // Minimal Distance to Trigger the Alarm
 double    minimalDistanceTriggerAlarm   =   150.0;
@@ -66,13 +66,13 @@ void loop() {
 int getDistance(){
   // Trigger the ultrasonic sensor to send a pulse
   digitalWrite(trigPin,
-                      LOW);  // Ensure LOW to clear pin
+                      LOW);    // Ensure LOW to clear pin
   delayMicroseconds(2);        // Short delay to stabilize the trigger pin
   digitalWrite(trigPin,
-                      HIGH); // Send HIGH pulse to trigger sensor
+                      HIGH);   // Send HIGH pulse to trigger sensor
   delayMicroseconds(10);       // Pulse duration
   digitalWrite(trigPin,
-                      LOW);  // Turn off the trigger pin
+                      LOW);    // Turn off the trigger pin
   
   // Measure the duration of the echo pulse
   duration    =    pulseIn(echoPin,
@@ -81,7 +81,7 @@ int getDistance(){
   // Calculate the distance in cm
   distance    =   duration / 2 / 29.1;
 
-  return    distance;
+  return          distance;
 }
 
 void handleTurnSignals(){
@@ -112,7 +112,7 @@ void handleTurnSignals(){
   // LEFT SIDE SWITCH
   if (swActivateL   ==    HIGH)
   {
-    ThereIsASwitchOn    =   true;
+    ThereIsASwitchOn      =   true;
     digitalWrite(turnRightSignal,
                                 LOW);
     digitalWrite(turnLeftSignal,
@@ -131,6 +131,7 @@ void handleTurnSignals(){
 void triggerAlarm(){
     tone(distanceAlarm,
                       3000); //Ensure to use a Hz between 2.5-5 kHz
-                      delay(200);
+     delay(200);
      noTone(distanceAlarm);    delay(200);
+
 }
