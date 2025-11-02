@@ -36,9 +36,8 @@
 # Component Connections:
 
 <p align="center">
-  <img src="https://pomf2.lain.la/f/1em99gof.png" width="500"><br>
-  Made in <a href="https://wokwi.com" target="_blank">Wokwi</a><br>
-  P.S.: You can use a single breadboard; I used two because, in the virtual environment, it's easier to organize and trace the connections this way.
+  <img src="https://pomf2.lain.la/f/n528u8lj.png" width="500"><br>
+  Made with <a href="https://wokwi.com" target="_blank">Wokwi</a><br>
 </p>
 
 # Overview:
