@@ -5,7 +5,7 @@ const   int   trigPin         = 12, echoPin        = 11;
 const   int   distanceAlarm   = 13;
 
 // Variables for duration and distance
-int   duration, distance;
+int       duration, distance;
 
 // Verify Switches
 bool      ThereIsASwitchOn              =   false;
@@ -135,4 +135,5 @@ void triggerAlarm(){
      noTone(distanceAlarm);    delay(200);
 
 }
+
 
